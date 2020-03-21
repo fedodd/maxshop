@@ -1,0 +1,7 @@
+body {
+  --color-red: rgb(218, 68, 68);
+  --color-green: lightgreen;
+
+  --paddingSide: 15px;
+  --paddingTop: 22px;
+}
