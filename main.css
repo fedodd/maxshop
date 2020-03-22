@@ -13,6 +13,7 @@
 .content___3XiM_ {
 	display: flex;
 	flex-wrap: wrap;
+
 	/* padding: var(--paddingTop) var(--paddingSide) 0 var(--paddingSide); */
 }
 
@@ -35,6 +36,11 @@
 			margin-top: var(--paddingTop);
 		}
 	}
+
+.footer___3tEK5 {
+	background-color: #f5f5f7;
+	height: 750px;
+}
 
 .header___kV6Yu {
 	height: var(--header-height);
@@ -81,80 +87,69 @@
 .block___bgHom {
 	position: relative;
 	background-color: white;
+	margin-bottom: 15px;
+	height: 490px;
 }
+
+	@media only screen and (min-width: 730px) {
+		.block___bgHom {
+			height: 540px;
+			margin-right: var(--paddingB);
+			margin-left: var(--padding);
+			margin-bottom: var(--paddingAlt);
+			width: 100%;
+			/* width: calc(50% - var(--padding) - var(--paddingB)); */
+		}
+
+		.block___bgHom:first-child {
+			margin-left: var(--paddingB);
+			margin-right: var(--padding);
+		}
+	}
+
+	@media only screen and (min-width: 1070px) {
+		.block___bgHom {
+			margin-right: var(--paddingBSmall);
+			margin-bottom: var(--paddingAlt-b);
+			margin-left: var(--paddingSmall);
+			width: 100%;
+			height: 630px;
+		}
+
+		.block___bgHom:first-child {
+			margin-right: var(--padding);
+			margin-left: var(--paddingB);
+		}
+	}
+
+	.block___bgHom.is__high___17pt- {
+		height: 100vh;
+	}
+
 	.block___bgHom.is__banner___3WqDr {
 		width: 100%;
 		height: 75vh;
 		min-height: 600px;
+		margin-left: 0;
+		margin-right: 0;
 	}
-	.block___bgHom.is__square___3J0gt {
-		height: 500px;
-		margin: var(--paddingTopSmall) var(--paddingSideSmall) 0
-			var(--paddingSideSmall);
-	}
-	.block___bgHom.is__square___3J0gt:first-child {
-			margin-top: 0;
-		}
-	@media only screen and (min-width: 768px) {
-			.block___bgHom.is__square___3J0gt {
-				margin: 0 0 0 var(--paddingTopSmall);
-				margin-right: 0;
-				width: calc(50% - 1.5 * var(--paddingSide));
-			}
 
-			.block___bgHom.is__square___3J0gt:last-child {
-				margin-right: var(--paddingSideSmall);
-			}
-		}
-	@media only screen and (min-width: 1280px) {
-			.block___bgHom.is__square___3J0gt {
-				margin-left: var(--paddingSide);
-				height: 700px;
-			}
-
-			.block___bgHom.is__square___3J0gt:last-child {
-				margin-right: var(--paddingSide);
-			}
-		}
 	.block___bgHom.is__fullscreen___1TU2a {
 		width: 100%;
 		height: 100vh;
-		margin-top: var(--paddingTopSmall);
 	}
-	@media only screen and (min-width: 768px) {
+
+	@media only screen and (min-width: 730px) {
 			.block___bgHom.is__fullscreen___1TU2a {
-				width: calc(100% - 2 * var(--paddingSide));
-				margin: var(--paddingTop) var(--paddingSide) 0 var(--paddingSide);
+				width: calc(100% - 2 * var(--paddingB));
+				margin: 0 var(--paddingB) var(--paddingAlt) var(--paddingB);
 			}
 		}
-	.block___bgHom.is__high___17pt- {
-		height: 500px;
-		margin: var(--paddingTopSmall) var(--paddingSideSmall) 0
-			var(--paddingSideSmall);
-	}
-	.block___bgHom.is__high___17pt-:first-child {
-			margin-top: 0;
-		}
-	@media only screen and (min-width: 768px) {
-			.block___bgHom.is__high___17pt- {
-				height: 100vh;
-				margin: 0 0 0 var(--paddingTopSmall);
-				margin-right: 0;
-				width: calc(50% - 1.5 * var(--paddingSide));
-			}
 
-			.block___bgHom.is__high___17pt-:last-child {
-				margin-right: var(--paddingSideSmall);
-			}
-		}
-	@media only screen and (min-width: 1280px) {
-			.block___bgHom.is__high___17pt- {
-				margin-left: var(--paddingSide);
-				height: 700px;
-			}
-
-			.block___bgHom.is__high___17pt-:last-child {
-				margin-right: var(--paddingSide);
+	@media only screen and (min-width: 1070px) {
+			.block___bgHom.is__fullscreen___1TU2a {
+				margin: 0 var(--paddingBSmall) var(--paddingAlt-b) var(--paddingBSmall);
+				width: calc(100% - 2 * var(--paddingBSmall));
 			}
 		}
 
@@ -540,16 +535,19 @@ template {
 }
 
 body {
-	background-color: #bfbfbf;
+	/* background-color: #bfbfbf; */
+	background-color: #f2f2f2;
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans,
 		Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
 	--color-red: rgb(218, 68, 68);
 	--color-green: lightgreen;
 	--header-height: 100px;
-	/* --paddingSide: 15px;
-	--paddingTop: 22px;
-	--paddingSideSmall: 8px;
-	--paddingTopSmall: 11px; */
+	--paddingB: 2.4%;
+	--paddingBSmall: 2%;
+	--padding: 1.2%;
+	--paddingSmall: 1%;
+	--paddingAlt: 15px;
+	--paddingAlt-b: 30px;
 }
 
