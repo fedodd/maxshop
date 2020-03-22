@@ -24,7 +24,7 @@ class App extends React.Component {
     const style = this.state.styleOn ? this.state.style : null;
     return (
 					<div className={classes.App} style={style}>
-						<Header />
+						{/* <Header /> */}
 						<div className={classes.content}>
 							<Block size="is__banner" />
 							<div className={classes.blockWrapper}>
