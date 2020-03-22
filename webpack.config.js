@@ -1,4 +1,5 @@
 const path = require('path');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
@@ -21,7 +22,7 @@ const config = {
       {
         test: /\.css$/,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
@@ -33,19 +34,22 @@ const config = {
         exclude: /\.module\.css$/
       },
       {
-        test: /\.(pcss|css)$/,
+        test: /\.(pcss)$/,
         use: [
-          'style-loader',
+          MiniCssExtractPlugin.loader,
           {
             loader: 'css-loader',
             options: {
               importLoaders: 1,
-              modules: true
+
+              modules: {
+                localIdentName: "[local]___[hash:base64:5]",
+              }
             }
           },
           'postcss-loader'
         ],
-        include: /\.module\.(pcss|css)$/
+        include: /\.module\.(pcss)$/
       },
       {
         test: /\.svg$/,
@@ -77,12 +81,19 @@ const config = {
     contentBase: './dist'
   },
   plugins: [
+
     new HtmlWebpackPlugin({
       template: require('html-webpack-template'),
       inject: false,
       appMountId: 'app',
-      filename: 'index.html'
+      filename: 'index.html',
+      meta: [{
+          name: 'viewport',
+          content: 'width=device-width, initial-scale=1, shrink-to-fit=no'
+        }]
+      //links: ["https://fonts.googleapis.com/css?family=Roboto"]
     }),
+    new MiniCssExtractPlugin(),
     new BundleAnalyzerPlugin({
       analyzerMode: 'static',
       openAnalyzer: false,
