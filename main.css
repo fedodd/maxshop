@@ -21,19 +21,12 @@
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	margin-top: var(--paddingTopSmall);
 	overflow: hidden;
 }
 
 @media only screen and (min-width: 768px) {
 		.blockWrapper___37UV2 {
 			flex-direction: row;
-		}
-	}
-
-@media only screen and (min-width: 1280px) {
-		.blockWrapper___37UV2 {
-			margin-top: var(--paddingTop);
 		}
 	}
 
@@ -86,7 +79,7 @@
 
 .block___bgHom {
 	position: relative;
-	background-color: white;
+	background-color: black;
 	margin-bottom: 15px;
 	height: 490px;
 }
@@ -94,31 +87,29 @@
 	@media only screen and (min-width: 730px) {
 		.block___bgHom {
 			height: 540px;
+			margin-left: var(--paddingB);
 			margin-right: var(--paddingB);
-			margin-left: var(--padding);
-			margin-bottom: var(--paddingAlt);
+			margin-bottom: var(--paddingB);
 			width: 100%;
 			/* width: calc(50% - var(--padding) - var(--paddingB)); */
 		}
 
 		.block___bgHom:first-child {
-			margin-left: var(--paddingB);
-			margin-right: var(--padding);
+			margin-right: 0;
 		}
 	}
 
 	@media only screen and (min-width: 1070px) {
 		.block___bgHom {
+			margin-bottom: var(--paddingBSmall);
 			margin-right: var(--paddingBSmall);
-			margin-bottom: var(--paddingAlt-b);
-			margin-left: var(--paddingSmall);
+			margin-left: var(--paddingBSmall);
 			width: 100%;
 			height: 630px;
 		}
 
 		.block___bgHom:first-child {
-			margin-right: var(--padding);
-			margin-left: var(--paddingB);
+			margin-right: 0;
 		}
 	}
 
@@ -142,13 +133,13 @@
 	@media only screen and (min-width: 730px) {
 			.block___bgHom.is__fullscreen___1TU2a {
 				width: calc(100% - 2 * var(--paddingB));
-				margin: 0 var(--paddingB) var(--paddingAlt) var(--paddingB);
+				margin: 0 var(--paddingB) var(--paddingB) var(--paddingB);
 			}
 		}
 
 	@media only screen and (min-width: 1070px) {
 			.block___bgHom.is__fullscreen___1TU2a {
-				margin: 0 var(--paddingBSmall) var(--paddingAlt-b) var(--paddingBSmall);
+				margin: 0 var(--paddingBSmall) var(--paddingBSmall) var(--paddingBSmall);
 				width: calc(100% - 2 * var(--paddingBSmall));
 			}
 		}
@@ -545,9 +536,5 @@ body {
 	--header-height: 100px;
 	--paddingB: 2.4%;
 	--paddingBSmall: 2%;
-	--padding: 1.2%;
-	--paddingSmall: 1%;
-	--paddingAlt: 15px;
-	--paddingAlt-b: 30px;
 }
 
