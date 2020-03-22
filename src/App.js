@@ -38,14 +38,14 @@ class App extends React.Component {
 							</div>
 							<Block size="is__fullscreen" />
 						</div>
-						<div>
+						<footer className={classes.footer}>
 							{/* <button
 								onClick={(e) => this.setState({ styleOn: !this.state.styleOn })}
 								style={{ position: "fixed", top: "10px", right: "10px" }}
 							>
 								Переключить отступы
 							</button> */}
-						</div>
+						</footer>
 					</div>
 				);
   }
