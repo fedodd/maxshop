@@ -7,29 +7,29 @@ import Block from "./components/Block/Block";
 
 class App extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-					styleOn: true,
-					style: {
-						"--paddingSide": "2%",
-						"--paddingTop": "2%",
-						"--paddingSideSmall": "0",
-						"--paddingTopSmall": "15px"
-					}
-				};
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+	// 				styleOn: true,
+	// 				style: {
+	// 					"--paddingSide": "2%",
+	// 					"--paddingTop": "2%",
+	// 					"--paddingSideSmall": "0",
+	// 					"--paddingTopSmall": "15px"
+	// 				}
+	// 			};
+  // }
 
   render() {
-    const style = this.state.styleOn ? this.state.style : null;
+
     return (
-					<div className={classes.App} style={style}>
+					<div className={classes.App}>
 						{/* <Header /> */}
 						<div className={classes.content}>
 							<Block size="is__banner" />
 							<div className={classes.blockWrapper}>
-								<Block size="is__square" />
-								<Block size="is__square" />
+								<Block />
+								<Block />
 							</div>
 							<Block size="is__fullscreen" />
 							<div className={classes.blockWrapper}>
@@ -39,12 +39,12 @@ class App extends React.Component {
 							<Block size="is__fullscreen" />
 						</div>
 						<div>
-							<button
+							{/* <button
 								onClick={(e) => this.setState({ styleOn: !this.state.styleOn })}
 								style={{ position: "fixed", top: "10px", right: "10px" }}
 							>
 								Переключить отступы
-							</button>
+							</button> */}
 						</div>
 					</div>
 				);
