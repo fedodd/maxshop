@@ -33,8 +33,8 @@ class App extends React.Component {
 							</div>
 							<Block size="is__fullscreen" />
 							<div className={classes.blockWrapper}>
-								<Block size="is__high" />
-								<Block size="is__high" />
+								<Block />
+								<Block />
 							</div>
 							<Block size="is__fullscreen" />
 						</div>
