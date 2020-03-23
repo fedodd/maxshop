@@ -1,99 +1,65 @@
-.blockWrapper {
-	display: flex;
-	flex-direction: row;
-	margin: var(--paddingTop) 0;
-	width: 100%;
-}
-
 .block {
 	position: relative;
-	/* margin: var(--paddingTop) var(--paddingSide) 0 var(--paddingSide); */
+	background-color: black;
+	margin-bottom: 15px;
+	height: 490px;
+
+	@media only screen and (min-width: 730px) {
+		& {
+			height: 540px;
+			margin-left: var(--paddingB);
+			margin-right: var(--paddingB);
+			margin-bottom: var(--paddingB);
+			width: 100%;
+			/* width: calc(50% - var(--padding) - var(--paddingB)); */
+		}
+
+		&:first-child {
+			margin-right: 0;
+		}
+	}
+
+	@media only screen and (min-width: 1070px) {
+		& {
+			margin-bottom: var(--paddingBSmall);
+			margin-right: var(--paddingBSmall);
+			margin-left: var(--paddingBSmall);
+			width: 100%;
+			height: 630px;
+		}
+
+		&:first-child {
+			margin-right: 0;
+		}
+	}
+
+	&.is__high {
+		height: 100vh;
+	}
 
 	&.is__banner {
 		width: 100%;
-		/* height: calc(100vh - var(--header-height)); */
 		height: 75vh;
 		min-height: 600px;
-		/* margin-left: 0;
-		margin-right: 0; */
-	}
-
-	&.is__square {
-		/* width: 100%; */
-		height: 500px;
-		margin: var(--paddingTopSmall) var(--paddingSideSmall) 0
-			var(--paddingSideSmall);
-		&:first-child {
-			margin-top: 0;
-		}
-
-		@media only screen and (min-width: 768px) {
-			& {
-				margin: 0 0 0 var(--paddingTopSmall);
-				margin-right: 0;
-				width: 50%;
-			}
-
-			&:last-child {
-				margin-right: var(--paddingSideSmall);
-			}
-		}
-
-		@media only screen and (min-width: 1280px) {
-			& {
-				margin-left: var(--paddingSide);
-				height: 700px;
-			}
-
-			&:last-child {
-				margin-right: var(--paddingSide);
-			}
-		}
+		margin-left: 0;
+		margin-right: 0;
 	}
 
 	&.is__fullscreen {
 		width: 100%;
 		height: 100vh;
-		margin: var(--paddingTopSmall) var(--paddingSideSmall) 0
-			var(--paddingSideSmall);
 
-		@media only screen and (min-width: 1280px) {
+		@media only screen and (min-width: 730px) {
 			& {
-				margin: var(--paddingTop) var(--paddingSide) 0 var(--paddingSide);
-			}
-		}
-	}
-
-	&.is__high {
-		/* width: 100%; */
-		height: 500px;
-		margin: var(--paddingTopSmall) var(--paddingSideSmall) 0
-			var(--paddingSideSmall);
-		&:first-child {
-			margin-top: 0;
-		}
-
-		@media only screen and (min-width: 768px) {
-			& {
-				height: 100vh;
-				margin: 0 0 0 var(--paddingTopSmall);
-				margin-right: 0;
-				width: 50%;
-			}
-
-			&:last-child {
-				margin-right: var(--paddingSideSmall);
+				width: calc(100% - 2 * var(--paddingB));
+				margin: 0 var(--paddingB) var(--paddingB) var(--paddingB);
 			}
 		}
 
-		@media only screen and (min-width: 1280px) {
+		@media only screen and (min-width: 1070px) {
 			& {
-				margin-left: var(--paddingSide);
-				height: 700px;
-			}
-
-			&:last-child {
-				margin-right: var(--paddingSide);
+				margin: 0 var(--paddingBSmall) var(--paddingBSmall) var(--paddingBSmall);
+				width: calc(100% - 2 * var(--paddingBSmall));
 			}
 		}
 	}

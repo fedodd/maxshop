@@ -8,7 +8,7 @@ const Block = props => {
       className={
         props.size ? classes.block + " " + classes[props.size] : classes.block
       }
-      style={{ backgroundColor: randomColor() }}
+      //style={{ backgroundColor: randomColor() }}
     ></div>
   );
 };
