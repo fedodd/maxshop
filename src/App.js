@@ -37,6 +37,27 @@ class App extends React.Component {
 								<Block />
 							</div>
 							<Block size="is__fullscreen" />
+							<div className={classes.is__ResponseHeight}>
+								<div className={classes.is__ResponseHeight__top}>
+									<div className={classes.blockWrapper}>
+										<Block size="is__difSize" />
+										<Block size="is__difSize" />
+									</div>
+								</div>
+							</div>
+							<div className={classes.is__ResponseHeight}>
+								<div className={classes.is__ResponseHeight__top}>
+									<div className={classes.blockWrapper}>
+										<Block size="is__difSize__reverse" />
+										<Block size="is__difSize__reverse" />
+									</div>
+								</div>
+							</div>
+							<div className={classes.is__threeWrapper}>
+								<Block size="is__three" />
+								<Block size="is__three" />
+								<Block size="is__three" />
+							</div>
 						</div>
 						<footer className={classes.footer}>
 						</footer>
