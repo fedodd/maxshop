@@ -63,4 +63,28 @@
 			}
 		}
 	}
+
+	&.is__difSize {
+		@media only screen and (min-width: 730px) {
+			&:last-child {
+				width: 64%;
+			}
+
+			&:first-child {
+				width: 36%;
+			}
+		}
+	}
+
+	&.is__difSize__reverse {
+		@media only screen and (min-width: 730px) {
+			&:first-child {
+				width: 64%;
+			}
+
+			&:last-child {
+				width: 36%;
+			}
+		}
+	}
 }
