@@ -87,4 +87,22 @@
 			}
 		}
 	}
+
+	&.is__three {
+		height: calc((50% - 0.5 * var(--paddingBottom)));
+		width: calc(50% - 1.5 * var(--paddingBottom));
+		background-color: red;
+		margin-right: var(--paddingBottom);
+		margin-bottom: var(--paddingBottom);
+		&:first-child {
+			margin-left: var(--paddingBottom);
+		}
+
+		&:last-child {
+			width: calc(100% - 2 * var(--paddingBottom));
+			margin-left: var(--paddingBottom);
+			background-color: aqua;
+			margin-bottom: 15px;
+		}
+	}
 }

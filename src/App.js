@@ -53,6 +53,11 @@ class App extends React.Component {
 									</div>
 								</div>
 							</div>
+							<div className={classes.is__threeWrapper}>
+								<Block size="is__three" />
+								<Block size="is__three" />
+								<Block size="is__three" />
+							</div>
 						</div>
 						<footer className={classes.footer}>
 						</footer>
