@@ -5,6 +5,7 @@ body {
 		Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 
 	--color-red: rgb(218, 68, 68);
+	--color-white: #f5f5f7;
 	--color-green: lightgreen;
 	--header-height: 44px;
 	--paddingB: 2.4%;

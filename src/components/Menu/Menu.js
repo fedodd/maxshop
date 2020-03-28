@@ -29,9 +29,9 @@ const Menu = ({ open }) => {
   ];
 
   return (
-    <nav  className={classes.list} style={open ? {transform: 'translateY(0)'} : {transform: 'translateY(-100%)'}}>
+    <nav  className={classes.list} style={open ? {transform: 'translateY(0)', opacity: '1'} : {transform: 'translateY(-100%)', opacity: '0'}}>
       {items.map((elem, index) => (
-        <li
+        <li style={open ? {opacity: '1'} : {opacity: '0'}}
           key={index}
           className={classes.listItem}
         >
