@@ -12,6 +12,8 @@ function Header(props) {
   const [open, setOpen] = React.useState(false);
   const node = React.useRef();
 
+  const [isHidden, setHidden] = React.useState(false);
+
   const size = useWindowSize();
 
   // Hook
@@ -31,7 +33,7 @@ function Header(props) {
     return windowSize;
   }
 
-
+  const header2 = ['Sketch', 'Figma', 'Adobe Xd', 'How it works', 'What\u0027s inside']
 
   return (
     <header className={classes.header}  style={open ? {backgroundColor: 'rgb(0, 0, 0, 1)', 	borderBottom: '1px solid rgb(66, 66, 69)'} : {backgroundColor: 'rgba(0, 0, 0, 0.8)', borderBottom: 'none'} }>
@@ -41,6 +43,14 @@ function Header(props) {
           <Burger open={open} setOpen={setOpen} />
           <Menu open={open} setOpen={setOpen} />
         </div>
+      </div>
+      <div className={classes.headerHolder2} style={isHidden ? {display: 'none'} : {display: 'block'}}>
+        <ul>
+          <li className={classes.is__big}>iOS Design Kit</li>
+          {header2.map(elem => <li>{elem}</li>)}
+          <li>iOS 13 GUI<span>free</span></li>
+          <li><button className={classes.buttonAlt} onClick={()=> setHidden(true)}>Buy now</button></li>
+        </ul>
       </div>
     </header>
   );
