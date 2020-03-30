@@ -1,10 +1,10 @@
 .header {
 	text-align: center;
 	transition: all 0.1s linear;
+	background-color: black;
 
 	@media only screen and (min-width: 730px) {
 		& {
-			background-color: rgba(0, 0, 0, 0.8) !important;
 			border-bottom: none !important;
 		}
 	}
@@ -41,19 +41,22 @@
 }
 
 .logo {
-	width: 16px;
-	height: 16px;
+	width: 24px;
+	height: 24px;
 	color: white;
 	position: absolute;
 	z-index: 10;
+	opacity: 0.8;
+	transition: 0.3s;
 
 	&:hover {
 		cursor: pointer;
+		opacity: 1;
 	}
 
 	@media only screen and (min-width: 730px) {
 		& {
-			position: static;
+			left: var(--paddingB);
 			/* margin-right: 30px; */
 		}
 	}
@@ -65,6 +68,8 @@
 }
 
 .headerHolder2 {
+	position: sticky;
+	top: 0;
 	display: none;
 	height: var(--header-height2);
 	background-color: black;
@@ -92,17 +97,13 @@
 			margin-right: 20px;
 		}
 
-		& li:nth-child(4) {
-			margin-right: auto;
-		}
-
 		& li:last-child {
 			margin-right: 0;
 		}
 
 		& li.is__big {
 			font-size: 18px;
-			margin-right: 30px;
+			margin-right: auto;
 		}
 	}
 

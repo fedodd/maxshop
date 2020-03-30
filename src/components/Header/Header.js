@@ -33,10 +33,8 @@ function Header(props) {
     return windowSize;
   }
 
-  const header2 = ['Sketch', 'Figma', 'Adobe Xd', 'How it works', 'What\u0027s inside']
-
   return (
-    <header className={classes.header}  style={open ? {backgroundColor: 'rgb(0, 0, 0, 1)', 	borderBottom: '1px solid rgb(66, 66, 69)'} : {backgroundColor: 'rgba(0, 0, 0, 0.8)', borderBottom: 'none'} }>
+    <header className={classes.header}  style={open ? {borderBottom: '1px solid rgb(66, 66, 69)'} : {borderBottom: 'none'} }>
       <div className={classes.headerHolder}>
         <img src={logo} className={classes.logo} />
         <div ref={node} className={classes.burgerWrapper}>
@@ -47,7 +45,8 @@ function Header(props) {
       <div className={classes.headerHolder2} style={isHidden ? {display: 'none'} : {display: 'block'}}>
         <ul>
           <li className={classes.is__big}>iOS Design Kit</li>
-          {header2.map(elem => <li>{elem}</li>)}
+          <li>How it works</li>
+          <li>What&rsquo;s inside</li>
           <li>iOS 13 GUI<span>free</span></li>
           <li><button className={classes.buttonAlt} onClick={()=> setHidden(true)}>Buy now</button></li>
         </ul>
