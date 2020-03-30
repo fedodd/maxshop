@@ -211,15 +211,8 @@
 
 	@media only screen and (min-width: 730px) {
 		.header___kV6Yu {
-			padding: 0 var(--paddingB);
 			background-color: rgba(0, 0, 0, 0.8) !important;
 			border-bottom: none !important;
-		}
-	}
-
-	@media only screen and (min-width: 1070px) {
-		.header___kV6Yu {
-			padding: 0 var(--paddingBSmall);
 		}
 	}
 
@@ -237,6 +230,18 @@
 	max-width: 1000px;
 	margin: 0 auto;
 }
+
+@media only screen and (min-width: 730px) {
+		.headerHolder___DBVnI, .headerHolder2___3xbEr {
+			padding: 0 var(--paddingB);
+		}
+	}
+
+@media only screen and (min-width: 1070px) {
+		.headerHolder___DBVnI, .headerHolder2___3xbEr {
+			padding: 0 var(--paddingBSmall);
+		}
+	}
 
 .logo___ZAkCV {
 	width: 16px;
@@ -262,6 +267,87 @@
 	width: 100%;
 }
 
+.headerHolder2___3xbEr {
+	display: none;
+	height: var(--header-height2);
+	background-color: black;
+	color: white;
+}
+
+.headerHolder2___3xbEr ul {
+		display: flex;
+
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+@media only screen and (min-width: 730px) {
+		.headerHolder2___3xbEr {
+			display: block;
+		}
+		.headerHolder2___3xbEr ul {
+			flex-direction: row;
+			align-items: center;
+			height: 100%;
+			font-size: 13px;
+		}
+
+		.headerHolder2___3xbEr li {
+			margin-right: 20px;
+		}
+
+		.headerHolder2___3xbEr li:nth-child(4) {
+			margin-right: auto;
+		}
+
+		.headerHolder2___3xbEr li:last-child {
+			margin-right: 0;
+		}
+
+		.headerHolder2___3xbEr li.is__big___mROX4 {
+			font-size: 18px;
+			margin-right: 30px;
+		}
+	}
+
+.headerHolder2___3xbEr .buttonAlt___39xUn {
+		background-color: rgb(2, 106, 252);
+		border-radius: 2px;
+		border-width: 0px;
+		border-color: rgb(0, 0, 0);
+		/* font-family: Graphik; */
+		font-weight: 500;
+		/* font-style: normal; */
+		color: rgb(255, 255, 255);
+		letter-spacing: 0.2px;
+		width: 78px;
+		text-indent: 0px;
+		height: 30px;
+		box-sizing: border-box;
+		padding-bottom: 2px;
+	}
+
+@media only screen and (min-width: 1020px) {
+		.headerHolder2___3xbEr {
+			height: 84px;
+		}
+
+		.headerHolder2___3xbEr ul {
+			font-size: 17px;
+		}
+
+		.headerHolder2___3xbEr li.is__big___mROX4 {
+			font-size: 20px;
+		}
+
+		.headerHolder2___3xbEr .buttonAlt___39xUn {
+			width: 120px;
+			height: 40px;
+		}
+	}
+
+/* шапка с сайта про посуду и мебель */
 /* .header {
 	height: var(--header-height);
 }
@@ -832,6 +918,7 @@ body {
 	--color-white: #f5f5f7;
 	--color-green: lightgreen;
 	--header-height: 44px;
+	--header-height2: 60px;
 	--paddingB: 2.4%;
 	--paddingBSmall: 2%;
 	--paddingBottom: 15px;
