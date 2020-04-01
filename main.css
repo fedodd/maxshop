@@ -391,7 +391,7 @@
 	}
 
 .button___4HwDE {
-	padding-bottom: 2px;
+	padding: 0 6px 2px;
 	box-sizing: border-box;
 	min-width: 50px;
 	height: 26px;
@@ -408,6 +408,10 @@
 	transition: 0.3s;
 	outline: none;
 }
+
+.button___4HwDE.is__alt___2an_m {
+		padding: 0 10px 2px;
+	}
 
 @media only screen and (min-width: 730px) {
 		.button___4HwDE {
@@ -505,6 +509,18 @@
 		top: var(--header-height);
 	}
 
+@media only screen and (min-width: 730px) {
+		.productList___2BcU9 {
+			height: 650px;
+		}
+	}
+
+@media only screen and (min-width: 1070px) {
+		.productList___2BcU9 {
+			height: 692px;
+		}
+	}
+
 /* шапка с сайта про посуду и мебель */
 /* .header {
 	height: var(--header-height);
@@ -596,18 +612,16 @@
 		margin-right: 0;
 	}
 
-	@media only screen and (min-width: 730px) and(min-height: 730px) {
-
-	.block___bgHom.is__banner___3WqDr {
-			height: 650px
-	}
+	@media only screen and (min-width: 730px) {
+			.block___bgHom.is__banner___3WqDr {
+				height: 650px;
+			}
 		}
 
-	@media only screen and (min-width: 1070px) and(min-height: 730px) {
-
-	.block___bgHom.is__banner___3WqDr {
-			height: 692px
-	}
+	@media only screen and (min-width: 1070px) {
+			.block___bgHom.is__banner___3WqDr {
+				height: 692px;
+			}
 		}
 
 	.block___bgHom.is__fullscreen___1TU2a {
