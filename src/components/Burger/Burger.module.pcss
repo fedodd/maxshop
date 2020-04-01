@@ -1,0 +1,46 @@
+.burger {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	padding: 0;
+	z-index: 10;
+
+	top: 9px;
+	left: 9px;
+	width: 30px;
+	height: 30px;
+
+	@media only screen and (min-width: 730px) {
+		& {
+			display: none;
+		}
+	}
+
+	&:focus {
+		outline: none;
+	}
+
+	& div {
+		display: block;
+		width: 17px;
+		height: 1px;
+		background: #fff;
+		border-radius: 0.5px;
+		position: absolute;
+		/* transition: top 0.3s linear, bottom 0.3s linear, transform 0.3s linear 0.2s; */
+		/* transition: bottom 0.3s linear;
+		transition: transform 0.3s linear 0.3s; */
+		left: 7px;
+		z-index: 1;
+		top: 14px;
+
+		&:last-child {
+			top: unset;
+			bottom: 14px;
+		}
+	}
+}

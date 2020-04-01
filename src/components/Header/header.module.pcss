@@ -1,4 +1,151 @@
 .header {
+	text-align: center;
+	transition: all 0.1s linear;
+	background-color: black;
+
+	@media only screen and (min-width: 730px) {
+		& {
+			border-bottom: none !important;
+		}
+	}
+}
+
+.headerHolder {
+	height: var(--header-height);
+	width: 100%;
+	/* background-color: rgba(0, 0, 0, 0.8); */
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	z-index: 11;
+	box-sizing: border-box;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.headerHolder,
+.headerHolder2 {
+	@media only screen and (min-width: 730px) {
+		& {
+			padding: 0 var(--paddingB);
+		}
+	}
+
+	@media only screen and (min-width: 1070px) {
+		& {
+			padding: 0 var(--paddingBSmall);
+		}
+	}
+}
+
+.logo {
+	width: 24px;
+	height: 24px;
+	color: white;
+	position: absolute;
+	z-index: 10;
+	opacity: 0.8;
+	transition: 0.3s;
+
+	&:hover {
+		cursor: pointer;
+		opacity: 1;
+	}
+
+	@media only screen and (min-width: 730px) {
+		& {
+			left: var(--paddingB);
+			/* margin-right: 30px; */
+		}
+	}
+	/* position: absolute; */
+}
+
+.burgerWrapper {
+	width: 100%;
+}
+
+.headerHolder2 {
+	position: sticky;
+	top: 0;
+	display: none;
+	height: var(--header-height2);
+	background-color: black;
+	color: white;
+	& ul {
+		display: flex;
+
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+
+	@media only screen and (min-width: 730px) {
+		& {
+			display: block;
+		}
+		& ul {
+			flex-direction: row;
+			align-items: center;
+			height: 100%;
+			font-size: 13px;
+		}
+
+		& li {
+			margin-right: 20px;
+		}
+
+		& li:last-child {
+			margin-right: 0;
+		}
+
+		& li.is__big {
+			font-size: 18px;
+			margin-right: auto;
+		}
+	}
+
+	& .buttonAlt {
+		background-color: rgb(2, 106, 252);
+		border-radius: 2px;
+		border-width: 0px;
+		border-color: rgb(0, 0, 0);
+		/* font-family: Graphik; */
+		font-weight: 500;
+		/* font-style: normal; */
+		color: rgb(255, 255, 255);
+		letter-spacing: 0.2px;
+		width: 78px;
+		text-indent: 0px;
+		height: 30px;
+		box-sizing: border-box;
+		padding-bottom: 2px;
+	}
+
+	@media only screen and (min-width: 1020px) {
+		& {
+			height: 84px;
+		}
+
+		& ul {
+			font-size: 17px;
+		}
+
+		& li.is__big {
+			font-size: 20px;
+		}
+
+		& .buttonAlt {
+			width: 120px;
+			height: 40px;
+		}
+	}
+}
+
+/* шапка с сайта про посуду и мебель */
+/* .header {
 	height: var(--header-height);
 }
 
@@ -38,4 +185,4 @@
 		height: 100%;
 		background-color: aqua;
 	}
-}
+} */
