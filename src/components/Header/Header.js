@@ -34,6 +34,11 @@ function Header(props) {
 
   const [product, setProduct] = React.useState(null);
 
+  function handleProductClick(e) {
+    e.preventDefault();
+    setProduct(RLX10);
+  }
+
   let RLX10 = {
     name: 'RLX10',
     price: 89
@@ -46,14 +51,14 @@ function Header(props) {
           <nav className={classes.nav}>
             <li className={classes.product}>{product ? product.name : 'Products'}
               <div className={classes.productList}>
-                <button className={classes.button} onClick={()=> setProduct(RLX10)}>RLX10</button>
+                <button className={classes.button} onClick={(e)=>handleProductClick(e)} style={{position: 'relative', top: '100px', left: '100px'}}>RLX10</button>
               </div>
             </li>
             {product ? <React.Fragment>
                 <li>Overview</li>
                 <li>Why {product.name}</li>
                 <li>Tech Specs</li>
-                <li><button className={classes.button}>{button.price}$</button></li>
+                <li className={classes.is__alt}><button className={classes.button}>{product.price}$</button></li>
               </React.Fragment>: null}
           </nav>
 

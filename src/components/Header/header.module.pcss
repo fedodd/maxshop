@@ -132,6 +132,7 @@
 .header {
 	background-color: black;
 	position: relative;
+	z-index: 11;
 }
 
 .headerHolder {
@@ -140,30 +141,35 @@
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
-
-	z-index: 11;
 	box-sizing: border-box;
-	max-width: 1000px;
 	margin: 0 auto;
+	padding: 0 5px;
 
 	@media only screen and (min-width: 730px) {
 		& {
 			padding: 0 var(--paddingB);
 		}
 	}
+
+	@media only screen and (min-width: 1070px) {
+		& {
+			padding: 0 var(--paddingBSmall);
+		}
+	}
 }
 
 .logo {
-	width: 30px;
-	height: 30px;
-	margin-right: var(--paddingNew);
+	width: 24px;
+	margin-right: 10px;
 	opacity: 0.8;
 	color: white;
 	transition: 0.3s;
 
 	@media only screen and (min-width: 730px) {
 		& {
+			width: 30px;
 			left: var(--paddingB);
+			margin-right: calc(var(--paddingNew) - 10px);
 		}
 	}
 
@@ -172,11 +178,12 @@
 		opacity: 1;
 	}
 }
+
 .button {
 	padding-bottom: 2px;
 	box-sizing: border-box;
-	width: 78px;
-	height: 30px;
+	min-width: 50px;
+	height: 26px;
 	border-width: 0px;
 	border-color: rgb(0, 0, 0);
 	border-radius: 2px;
@@ -188,6 +195,15 @@
 	color: rgb(255, 255, 255);
 	background-color: rgb(2, 106, 252);
 	transition: 0.3s;
+	outline: none;
+
+	@media only screen and (min-width: 730px) {
+		& {
+			width: 78px;
+			height: 30px;
+			font-size: 17px;
+		}
+	}
 
 	@media only screen and (min-width: 1020px) {
 		& {
@@ -205,15 +221,34 @@
 .nav {
 	display: flex;
 	flex-direction: row;
+	height: 100%;
 	width: 100%;
 	color: var(--color-white);
 	list-style: none;
-	font-size: 17px;
+	font-size: 14px;
+
+	@media only screen and (min-width: 730px) {
+		& {
+			font-size: 17px;
+		}
+	}
 
 	& li {
 		opacity: 0.8;
 		transition: opacity 0.3s;
-		margin-right: var(--paddingNew);
+		margin-right: 5px;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		padding: 2px 2px;
+		box-sizing: border-box;
+
+		@media only screen and (min-width: 730px) {
+			& {
+				padding: 5px 10px;
+				margin-right: var(--paddingNew);
+			}
+		}
 
 		&:hover {
 			cursor: pointer;
@@ -227,26 +262,35 @@
 
 	& li:last-child {
 		margin-right: 0;
+		padding-right: 0;
+	}
+
+	& li.is__alt {
+		opacity: 1;
 	}
 }
 
 .productList {
 	opacity: 0;
 	left: 0;
-	top: var(--header-height);
-	position: absolute;
+	top: 0;
+	position: fixed;
 	transform: translateY(-100%);
-	transition: 0.6s;
+	/* transition: 0.3s; */
 	height: 500px;
 	width: 100%;
 	background-color: black;
-	z-index: 10;
+	z-index: -1;
 	background-image: url("../../images/flat.png");
 	background-size: contain;
+	background-repeat: no-repeat;
+	transition-delay: 0.1s;
 
-	.product:hover & {
+	.product:hover &,
+	&:hover {
 		opacity: 1;
 		transform: translateY(0);
+		top: var(--header-height);
 	}
 }
 
