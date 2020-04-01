@@ -180,7 +180,7 @@
 }
 
 .button {
-	padding-bottom: 2px;
+	padding: 0 6px 2px;
 	box-sizing: border-box;
 	min-width: 50px;
 	height: 26px;
@@ -196,6 +196,10 @@
 	background-color: rgb(2, 106, 252);
 	transition: 0.3s;
 	outline: none;
+
+	&.is__alt {
+		padding: 0 10px 2px;
+	}
 
 	@media only screen and (min-width: 730px) {
 		& {
@@ -291,6 +295,18 @@
 		opacity: 1;
 		transform: translateY(0);
 		top: var(--header-height);
+	}
+
+	@media only screen and (min-width: 730px) {
+		& {
+			height: 650px;
+		}
+	}
+
+	@media only screen and (min-width: 1070px) {
+		& {
+			height: 692px;
+		}
 	}
 }
 
