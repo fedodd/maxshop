@@ -475,6 +475,10 @@
 			opacity: 1;
 		}
 
+.nav___1Ylbu.is__product___2iYPk li:first-child {
+		margin-right: auto;
+	}
+
 .nav___1Ylbu li:last-child {
 		margin-right: 0;
 		padding-right: 0;
@@ -483,6 +487,10 @@
 .nav___1Ylbu li.is__alt___2an_m {
 		opacity: 1;
 		margin-left: auto;
+	}
+
+.nav___1Ylbu.is__product___2iYPk li.is__alt___2an_m {
+		margin-left: 0;
 	}
 
 .productList___2BcU9 {
