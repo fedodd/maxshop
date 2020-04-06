@@ -54,7 +54,7 @@ function Header(props) {
             <li>Why {product.name}</li>
             <li>Tech Specs</li>
             <li className={classes.is__alt}>
-              <button className={classes.button}>Buy now</button>
+              <button className={classes.button + " " + classes.is__alt}>Buy now</button>
             </li>
           </nav>
         ) : (
